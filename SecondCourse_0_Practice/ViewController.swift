@@ -9,9 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let testView = UIView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        testView.backgroundColor = .red
+        testView.translatesAutoresizingMaskIntoConstraints = false
+
+        view.addSubview(testView)
+
+        testView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+        testView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        testView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        testView.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
 
 
